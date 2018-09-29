@@ -7,10 +7,16 @@ void setup() {
 }
 
 void draw() {
+    float side;
+    if (height < width) {
+        side = height * 0.9;
+    } else {
+        side = width * 0.9;
+    }
     Sierpinski tri = new Sierpinski(
         width / 2, 
         height / 2, 
-        1000, 
+        int(side), 
         color(255, 255, 255, 30), 
         7);
 
@@ -30,4 +36,7 @@ void draw() {
 
     conc.draw();
     tri.draw();
+
+    save("coolbg.jpg");
+    exit();
 }
