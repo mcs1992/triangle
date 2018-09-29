@@ -14,8 +14,6 @@ public class Concentric {
         this.radiusOffset = radiusOffset;
         this.fill = fill;
         this.hueOffset = hueOffset;
-
-        println("radius: "+radius);
     }
 
     public void draw() {
